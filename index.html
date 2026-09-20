@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vhs</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+
+        <div class="header">
+            <h1>VHS Teilnahmeverwaltung</h1>
+            <button class="anmeldung" id="Anmeldung">Neue Anmeldung</button>
+        </div>
+
+        <div class="container">
+            <input type="search" name="suche" placeholder="Nach Name oder Kurs suchen">
+        </div>
+
+        <div>
+            <table id="anmeldungen-tabelle" border="1" cellpadding="15" cellspacing="1">
+                <tr>
+                    <td>Name</td>
+                    <td>Kurs</td>
+                    <td>Starttermin</td>
+                    <td>Aktionen</td>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+
+    <div class="modal-overlay" id="modal-overlay">
+        <div class="container2">
+
+            <h1 id="formular-titel">Formular</h1>
+            <table id="Formular">
+                <tr>
+                    <td><input type="text" name="name" placeholder="vorname"></td>
+                    <td><input type="text" name="nachname" placeholder="nachname"></td>
+                </tr>
+
+                <tr>
+                    <td><select name="geschlecht" id="geschlecht">
+                        <option value="---">---</option>
+                        <option value="m">m</option>
+                        <option value="w">w</option>
+                        <option value="d">d</option>
+                    </select></td>
+                    <td><input type="text" name="plz" placeholder="PLZ"></td>
+                </tr>
+
+                <tr>
+                    <td colspan="2"><input type="text" name="strasse" placeholder="Strasse"></td>
+                </tr>
+
+                <tr>
+                    <td colspan="2"><input type="text" name="ort" placeholder="Ort"></td>
+                </tr>
+
+                <tr>
+                    <td colspan="2"><input type="tel" name="telepfon" placeholder="Telepfon"></td>
+                </tr>
+
+                <tr>
+                    <td colspan="2"><input type="text" name="altersgruppe" placeholder="Altersgruppe"></td>
+                </tr>
+
+                <tr>
+                    <td colspan="2">
+                        <select name="kurs" id="kurs">
+                            <option value="">Kurs auswählen</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="2" style="text-align: right;">
+                        <button type="button" id="abbrechen">Abbrechen</button>
+                        <button type="submit" id="speichern">Speichern</button>
+                    </td>
+                </tr>
+            </table>
+
+            <input type="hidden" id="edit-teilnehmernr" value="">
+            <input type="hidden" id="edit-alte-kursnr" value="">
+        </div>
+    </div>
+
+    <script src="renderer.js"></script>
+</body>
+</html>
